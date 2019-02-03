@@ -1,4 +1,5 @@
 class TestSuitesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_test_suite, only: [:show, :edit, :update, :destroy]
 
   # GET /test_suites

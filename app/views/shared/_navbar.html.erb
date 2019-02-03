@@ -8,6 +8,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
+      <% if user_signed_in? %>
+        <%= link_to('Suites', test_suites_path, class: 'nav-link') %>
+      <% end %>
     </ul>
     <ul class="navbar-nav mr-sm-2">
       <% if user_signed_in? %>

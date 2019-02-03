@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @test_suite.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @test_suite.description %>
+</p>
+
+<p>
+  <strong>Base url:</strong>
+  <%= @test_suite.base_url %>
+</p>
+
+<p>
+  <strong>Viewport:</strong>
+  <%= @test_suite.viewport %>
+</p>
+
+<%= link_to 'Edit', edit_test_suite_path(@test_suite) %> |
+<%= link_to 'Back', test_suites_path %>

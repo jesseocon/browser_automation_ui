@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :test_suites
   devise_for :users
 
   root to: 'pages#index'

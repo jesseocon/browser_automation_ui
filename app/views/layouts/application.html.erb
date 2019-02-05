@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BrowserAutomationUi</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application' %>
-  </head>
-
+    <%= render 'shared/head' %>
   <body>
     <%= render 'shared/navbar' %>
-    <%= yield %>
+    <div class="<%= body_class %>">
+      <div class="content">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,44 @@
+<div class="content">
+  <div class="container">
+    <div class="col-lg-4 ml-auto mr-auto">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), class: 'form', html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="card card-forgot-password card-white">
+          <div class="card-header">
+            <h1 class="card-title">Reset password</h1>
+          </div>
+          <div class="card-body">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="tim-icons icon-email-85"></i>
+                </div>
+              </div>
+              <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+            </div>
+          </div>
+          <div class="card-footer">
+            <%= f.submit "Reset password", class: 'btn btn-primary btn-lg btn-block mb-3' %>
+            <%= render "devise/shared/links" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!-- <h2>Forgot your password?</h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Send me reset password instructions" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %> -->

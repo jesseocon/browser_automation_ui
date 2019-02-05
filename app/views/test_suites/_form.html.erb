@@ -1,37 +1,49 @@
-<%= form_with(model: test_suite, local: true) do |form| %>
-  <% if test_suite.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(test_suite.errors.count, "error") %> prohibited this test_suite from being saved:</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <%= form_with(model: test_suite, local: true) do |form| %>
+        <% if test_suite.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(test_suite.errors.count, "error") %> prohibited this test_suite from being saved:</h2>
 
-      <ul>
-      <% test_suite.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+            <ul>
+            <% test_suite.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="card-header">
+          <h4 class="card-title">
+            Suite
+          </h4>
+        </div>
+        <div class="card-body">
+          <%= form.label :name %>
+          <div class="form-group">
+            <%= form.text_field :name, class: 'form-control' %>
+          </div>
+
+          <%= form.label :description %>
+          <div class="form-group">
+            <%= form.text_field :description, class: 'form-control' %>
+          </div>
+
+          <%= form.label :base_url %>
+          <div class="form-group">
+            <%= form.text_field :base_url, class: 'form-control' %>
+          </div>
+
+          <%= form.label :viewport %>
+          <div class="form-group">
+            <%= form.number_field :viewport, class: 'form-control' %>
+          </div>
+
+        </div>
+        <div class="card-footer">
+          <%= form.submit class: 'btn btn-fill btn-primary' %>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :base_url %>
-    <%= form.text_field :base_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :viewport %>
-    <%= form.number_field :viewport %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

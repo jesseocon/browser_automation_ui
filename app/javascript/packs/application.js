@@ -6,7 +6,12 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
-import 'jquery'
+import $ from 'jquery'
 import 'bootstrap'
+import '../vendor/black-dashboard'
+import '../vendor/demo'
+
+window.$ = $
+window.jQuery = $
 
 console.log('Hello World from Webpacker')

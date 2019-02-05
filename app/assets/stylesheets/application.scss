@@ -1,1 +1,13 @@
 @import 'bootstrap/scss/bootstrap';
+
+@import 'nucleo-icons';
+@import 'black-dashboard';
+@import 'demo';
+
+.content {
+  padding-top: 70px;
+}
+
+.sessions-new > .content {
+  padding-top: 150px;
+}
